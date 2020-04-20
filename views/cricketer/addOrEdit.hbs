@@ -1,0 +1,53 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/cricketer" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{cricketer._id}}">
+    <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" class="form-control" name="fullName" placeholder="Full Name" value="{{cricketer.fullName}}">
+        <div class="text-danger">
+            {{cricketer.fullNameError}}</div>
+    </div>
+    <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" class="form-control" name="lastname" placeholder="lastname" value="{{cricketer.lastname}}">
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Debut</label>
+            <input type="text" class="form-control" name="debut" placeholder="debut" value="{{cricketer.debut}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Date of Birth</label>
+            <input type="text" class="form-control" name="DOB" placeholder="DOB" value="{{cricketer.DOB}}">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Batting</label>
+            <input type="text" class="form-control" name="batting" placeholder="batting" value="{{cricketer.batting}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Bowling</label>
+            <input type="text" class="form-control" name="bowling" placeholder="bowling" value="{{cricketer.bowling}}">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Shirt no</label>
+            <input type="text" class="form-control" name="shirtno" placeholder="shirtno" value="{{cricketer.shirtno}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Runs</label>
+            <input type="text" class="form-control" name="runs" placeholder="runs" value="{{cricketer.runs}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Wickets</label>
+            <input type="text" class="form-control" name="wickets" placeholder="wickets" value="{{cricketer.wickets}}">
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/cricketer/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>

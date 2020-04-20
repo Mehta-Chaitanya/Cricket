@@ -1,0 +1,36 @@
+<h3><a class="btn btn-secondary" href="/cricketer"><i class="fa fa-plus"></i> Create New</a> Cricketers List</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Last Name</th>
+            <th>Debut</th>
+            <th>Date of Birth</th>
+            <th>Batting</th>
+            <th>Bowling</th>
+            <th>Shirt no</th>
+            <th>Runs</th>
+            <th>Wickets</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.fullName}}</td>
+            <td>{{this.lastname}}</td>
+            <td>{{this.debut}}</td>
+            <td>{{this.DOB}}</td>
+            <td>{{this.batting}}</td>
+            <td>{{this.bowling}}</td>
+            <td>{{this.shirtno}}</td>
+            <td>{{this.runs}}</td>
+            <td>{{this.wickets}}</td>
+            <td>
+                <a href="/cricketer/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/cricketer/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
